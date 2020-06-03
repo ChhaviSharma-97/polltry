@@ -25,7 +25,7 @@ pipeline {
                 echo 'Running build automation'
                 sh 'echo "Start Successful!"'
 		sh 'ls -l'
-		sh 'touch newfile.txt'
+		sh 'touch chhavi.txt'
 		sh 'ls -l'
                 
             }
