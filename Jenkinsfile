@@ -24,6 +24,9 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 sh 'echo "Start Successful!"'
+		sh 'ls -l'
+		sh 'vim newfile.txt'
+		sh 'ls -l'
                 
             }
         }
