@@ -50,6 +50,17 @@ pipeline {
                 
             }
         }
+	    
+	stage('Git Checkout') {
+            steps {
+                checkout([
+	                $class: 'GitSCM', 
+	                branches: [[name: '*/master']],  
+	                userRemoteConfigs: [[credentialsId: GIT_CRED_ID, url: REPO_URL]]
+	                ])
+	           sh "ls -l"
+            }
+        }
         
     }
 }
