@@ -11,7 +11,6 @@ pipeline {
     stages {
         
         stage('Git Checkout') {
-            agent any 
             steps {
                 checkout([
 	                $class: 'GitSCM', 
@@ -30,8 +29,7 @@ pipeline {
         }
         
         
-        stage('Git Checkout') {
-            agent any 
+        stage('Git Checkout 2') {
             steps {
                 checkout([
 	                $class: 'GitSCM', 
